@@ -1,0 +1,44 @@
+/*
+ * _variables.scss
+ */
+/*
+ * _mixins.scss
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  min-height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-size-adjust: 100%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100%;
+  background: url("../img/background-1.png") no-repeat right top; }
+
+header {
+  max-width: 1200px; }
+  header nav ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle; }
+  header nav li {
+    display: inline;
+    margin-right: 30px;
+    list-style: none; }
+  header nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #707070;
+    line-height: 110px; }

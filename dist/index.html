@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste MEO</title>
+    <script src="js/vendor/handlebars-v2.0.0.js"></script>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body>
+    <div class="small-blue-square"></div>
+    <div class="big-red-square"></div>
+    <div class="confirm"></div>
+    <div class="cancel"></div>
+    <!--This is our template. -->
+    <!--Data will be inserted in its according place, replacing the brackets.-->
+    <script id="example-template" type="text/x-handlebars-template">
+
+        <!-- people is looked up on the global context, the one we pass to the compiled template -->
+
+        {{#each people}}
+
+        <!-- Here the context is each individual person. So we can access its properties directly: -->
+        <p>{{firstName}} {{lastName}}</p>
+
+        {{/each}}
+
+    </script>
+
+    <!--Your new content will be displayed in here-->
+    <div class="content-placeholder"></div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

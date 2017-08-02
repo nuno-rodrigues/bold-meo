@@ -1,0 +1,31 @@
+/*
+ * _variables.scss
+ */
+
+// -- Font
+$body-font: 'Open Sans',
+sans-serif;
+// -- Colors
+$light-primary: #f0eeee;
+$dark-primary: #707070;
+$light-secondary: #1a1a1a;
+$dark-secondary: #0f0f0f;
+$light-green: #00ffa2;
+$dark-green: #01905c;
+// -- Font weights
+$font-weight-base: 300;
+$font-weight-regular: $font-weight-base;
+$font-weight-bold: 400;
+$font-weight-bolder: 600;
+// - Font sizes
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-headline-primary: 30px;
+$font-size-headline-primary-large: 42px;
+// -- spacing
+$horizontal-spacing: 10px;
+$vertical-spacing: 10px;
+// -- page
+$breakpoint-small-px: 480px;
+$breakpoint-large-px: 1200px;
+$page-max-width: 1200px;
