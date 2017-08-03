@@ -1,6 +1,8 @@
 @charset "UTF-8";
-@import '_variables.scss';
-@import '_mixins.scss';
+@import 'variables';
+@import 'mixins';
+@import 'kube';
+@import 'font-awesome/font-awesome';
 // Styles
 *,
 *::before,
@@ -24,28 +26,194 @@ body {
     padding: 0;
     position: relative;
     min-height: 100%;
-    background: url('../img/background-1.png') no-repeat right top;
+    background: url('../img/background-1.png') no-repeat left top;
+    background-size: 100% auto;
 }
 
-header {
+header,
+main,
+footer {
+    margin: 0 auto;
+    padding: 0 10px;
     max-width: $page-max-width;
-    nav {
-        ul {
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        li {
-            display: inline;
-            margin-right: 30px;
-            list-style: none;
-        }
+}
+
+h1,
+.h1 {
+    font-family: $body-font;
+    font-size: $font-size-bigger;
+    font-weight: $font-weight-light;
+    .introduction & {
+        line-height: 1;
+        margin: 0 40% 60px 0;
+    }
+}
+
+h2 {
+    .contact-information & {
+        color: $dark-secondary;
+        margin-top: -72px;
+        font-family: $body-font;
+        font-weight: $font-weight-bolder;
+    }
+    .products-item & {
+        text-align: center;
+        background-color: $dark-secondary;
+        color: $light-primary;
+        margin: 0 20px;
+        padding: 5px 0;
+        font-size: $font-size-normal;
+    }
+}
+
+p {
+    .introduction & {
+        margin-right: 60%;
+    }
+    footer & {
+        margin: 40px 0;
+        color: $dark-primary;
+    }
+    .contact-information & {
+        color: $dark-secondary;
+    }
+    .contacts & {
+        margin-top: 50px;
+        color: $light-primary;
         a {
+            color: $light-primary;
             text-decoration: none;
-            font-size: 24px;
-            color: $dark-primary;
-            line-height: 110px;
+            &:hover {
+                color: $light-secondary;
+            }
         }
     }
 }
+
+img {
+    .introduction & {
+        z-index: $z-over-content;
+    }
+}
+
+button {
+    @include button($light-primary,
+    $dark-green);
+}
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    li {
+        display: inline;
+        margin-right: 30px;
+        list-style: none;
+        .introduction & {
+            margin-right: 0;
+            img {
+                width: 95px;
+                background-color: $dark-green;
+                padding: 3px;
+                opacity: .5;
+                border: 1px solid $dark-green;
+                cursor: pointer;
+                &:hover {
+                    opacity: .7;
+                }
+                &.active {
+                    background-color: transparent;
+                    opacity: 1;
+                    cursor: default;
+                }
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        header & {
+            font-size: $font-size-big;
+            color: $dark-primary;
+            padding: 5px 20px;
+            &:hover {
+                color: $dark-secondary;
+            }
+        }
+        footer & {
+            color: $dark-secondary;
+            &:hover {
+                color: $dark-primary;
+            }
+        }
+        &:hover {
+            color: $dark-secondary;
+        }
+        &.active {
+            background-color: $dark-secondary;
+            color: $light-primary;
+            &:hover {
+                color: $dark-primary;
+            }
+        }
+    }
+}
+
+form {
+    margin-bottom: 0;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid $dark-primary;
+    color: $dark-primary;
+    .contact-information & {
+        background-color: transparent;
+        border-bottom: 1px solid $dark-secondary;
+        color: $dark-secondary;
+    }
+}
+
+article {
+    .introduction & {
+        z-index: $z-over-page;
+    }
+}
+
+.introduction {
+    margin-top: 140px;
+    padding: 0 50px 0;
+    background: url('../img/mobile1.png') no-repeat right top;
+    background-size: 60% auto;
+}
+
+.contact-information {
+    margin: 50px 0;
+    .contact-information-contents {
+        padding: 40px;
+        &.form {
+            background-color: $light-green;
+        }
+        &.contacts {
+            background-color: $dark-green;
+        }
+    }
+}
+
+.products {
+    margin: 50px 0;
+    .products-item {
+        img {
+            width: 100%;
+        }
+        ul li:before {
+            content: "_ ";
+            font-weight: $font-weight-bolder;
+            font-size: $font-size-big;
+        }
+    }
+}
+
+@include placeholder($dark-secondary);

@@ -1,3 +1,5 @@
+@import 'kube';
+
 /*
  * _variables.scss
  */
@@ -13,18 +15,20 @@ $dark-secondary: #0f0f0f;
 $light-green: #00ffa2;
 $dark-green: #01905c;
 // -- Font weights
+$font-weight-light: 100;
 $font-weight-base: 300;
 $font-weight-regular: $font-weight-base;
 $font-weight-bold: 400;
 $font-weight-bolder: 600;
 // - Font sizes
-$font-size-base: 16px;
+$font-size-bigger: 48px;
+$font-size-big: 24px;
+$font-size-middle: 36px;
+$font-size-normal: 22px;
+$font-size-base: 18px;
 $font-size-small: 14px;
 $font-size-headline-primary: 30px;
 $font-size-headline-primary-large: 42px;
-// -- spacing
-$horizontal-spacing: 10px;
-$vertical-spacing: 10px;
 // -- page
 $breakpoint-small-px: 480px;
 $breakpoint-large-px: 1200px;
