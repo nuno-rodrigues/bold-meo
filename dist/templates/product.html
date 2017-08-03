@@ -1,0 +1,14 @@
+{{#items}}
+<article class="products-item col col-4">
+    <h2>{{title}}</h2>
+    <figure>
+        <img src="img/{{image}}.png">
+        <figcaption class="invisible">Watch 1</figcaption>
+    </figure>
+    <ul class="unstyled">
+        {{#details}}
+        <li>{{text}}</li>
+        {{/details}}
+    </ul>
+</article>
+{{/items}}

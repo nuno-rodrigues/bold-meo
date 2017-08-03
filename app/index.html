@@ -14,13 +14,13 @@
 <body>
 
     <header class="row auto align-middle">
-        <div class="col">
+        <div class="col col-1">
             <img src="img/logo-top.png" />
         </div>
-        <nav class="col push-right">
+        <nav class="col col-8 push-right">
             <div id="menu-area"></div>
         </nav>
-        <div class="col">
+        <div class="col col-3">
             <form class="row gutters align-middle">
                 <input type="text" placeholder="pesquisar" class="col col-11">
                 <i class="fa fa-search fa-3" aria-hidden="true" class="col col-1"></i>
@@ -48,16 +48,18 @@
             <div id="products-area" class="row"></div>
         </section>
         <section class="contact-information row">
-            <div class="contact-information-contents form col col-7">
+            <div class="contact-information-contents form col col-8">
                 <h2>Sugestões</h2>
                 <form>
-                    <input type="text" placeholder="Nome" class="col col-11">
-                    <input type="text" placeholder="Email" class="col col-11">
-                    <input type="text" placeholder="Mensagem" class="col col-11">
+                    <div class="row gutters">
+                        <input type="text" placeholder="Nome" class="col col-5">
+                        <input type="text" placeholder="Email" class="col col-5 offset-2">
+                    </div>
+                    <input type="text" placeholder="Mensagem">
                     <button>Enviar</button>
                 </form>
             </div>
-            <div class="contact-information-contents contacts col col-5">
+            <div class="contact-information-contents contacts col col-4">
                 <h2><i class="fa fa-map-marker fa-1x" aria-hidden="true"></i>Contactos</h2>
                 <p>Lorem ipsum dolor, Lda<br> Rua do Brasil, 31 9D<br> 1450-234 Lisboa</p>
                 <p><a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a><br><a href="phone:+3513541212">21 354 12 12</a></p>

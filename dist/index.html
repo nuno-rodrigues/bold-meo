@@ -4,34 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <title>Teste MEO</title>
-    <script src="js/vendor/handlebars-v2.0.0.js"></script>
-    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/vendor/kube.min.css">
+    <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body>
-    <div class="small-blue-square"></div>
-    <div class="big-red-square"></div>
-    <div class="confirm"></div>
-    <div class="cancel"></div>
-    <!--This is our template. -->
-    <!--Data will be inserted in its according place, replacing the brackets.-->
-    <script id="example-template" type="text/x-handlebars-template">
 
-        <!-- people is looked up on the global context, the one we pass to the compiled template -->
+    <header class="row auto align-middle">
+        <div class="col col-1">
+            <img src="img/logo-top.png" />
+        </div>
+        <nav class="col col-8 push-right">
+            <div id="menu-area"></div>
+        </nav>
+        <div class="col col-3">
+            <form class="row gutters align-middle">
+                <input type="text" placeholder="pesquisar" class="col col-11">
+                <i class="fa fa-search fa-3" aria-hidden="true" class="col col-1"></i>
+            </form>
+        </div>
+    </header>
 
-        {{#each people}}
+    <main>
+        <section class="introduction row" id="information-container">
+            <article>
+                <h1>Lorem ipsum dolor sit amet, nibh noluisse nec ei</h1>
+                <p>Lorem ipsum dolor sit amet, nibh noluisse nec ei, audiam omittam at mei. Sit legere periculis id, et mel labitur ocurreret. Fuisset quaestio has at, ex labores corpora voluptatibus ius, ut ponderum torquatos sea. An facilisis eloquentiam</p>
+                <button>Follow article</button>
+                <button>Buy now</button>
+            </article>
+            <nav class="col col-6 push-center text-center" id="information-menu">
+                <ul>
+                    <li><img src="img/mobile1.png" class="active"></li>
+                    <li><img src="img/mobile2.png"></li>
+                    <li><img src="img/mobile3.png"></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="products">
+            <div id="products-area" class="row"></div>
+        </section>
+        <section class="contact-information row">
+            <div class="contact-information-contents form col col-8">
+                <h2>Sugestões</h2>
+                <form>
+                    <div class="row gutters">
+                        <input type="text" placeholder="Nome" class="col col-5">
+                        <input type="text" placeholder="Email" class="col col-5 offset-2">
+                    </div>
+                    <input type="text" placeholder="Mensagem">
+                    <button>Enviar</button>
+                </form>
+            </div>
+            <div class="contact-information-contents contacts col col-4">
+                <h2><i class="fa fa-map-marker fa-1x" aria-hidden="true"></i>Contactos</h2>
+                <p>Lorem ipsum dolor, Lda<br> Rua do Brasil, 31 9D<br> 1450-234 Lisboa</p>
+                <p><a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a><br><a href="phone:+3513541212">21 354 12 12</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center">
+        <nav class="row">
+            <ul class="col col-6 push-center">
+                <li><a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-vimeo fa-2x" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+        <p><i class="fa fa-copyright" aria-hidden="true"></i> Todos os direitos reservados</p>
+    </footer>
 
-        <!-- Here the context is each individual person. So we can access its properties directly: -->
-        <p>{{firstName}} {{lastName}}</p>
-
-        {{/each}}
-
-    </script>
-
-    <!--Your new content will be displayed in here-->
-    <div class="content-placeholder"></div>
-
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/kube.min.js"></script>
+    <script src="js/vendor/mustache.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 
